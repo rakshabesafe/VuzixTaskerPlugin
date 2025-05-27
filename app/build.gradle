@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.example.vuzixtaskerplugin"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.1' // Standard Android dependency
+    implementation 'com.google.android.material:material:1.7.0' // Standard Android dependency
+    implementation 'com.joaomgcd:taskerpluginlibrary:0.4.10'
+    implementation 'com.vuzix:ultralite-sdk-android:1.9'
+}
